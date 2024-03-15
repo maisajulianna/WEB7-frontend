@@ -1,9 +1,11 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-export default function useLogin(url) {
+
+export default function useLogin() {
     const [error, setError] = useState(null);
     const [isLoading, setIsLoading] = useState(null);
-    const login = async (object) => {
+    const url = "http://localhost:4000/api/user/login";
+
+    const handleLogin = async (object) => {
         setIsLoading(true);
         setError(null);
         const response = await fetch(url, {
@@ -12,6 +14,7 @@ export default function useLogin(url) {
           body: JSON.stringify(object),
         });
         const user = await response.json();
+        console.log(user)
     
         if (!response.ok) {
           setError(user.error);
@@ -24,5 +27,5 @@ export default function useLogin(url) {
         setIsLoading(false);
       };
 
-      return { login, isLoading, error };
+      return { handleLogin, isLoading, error };
 }

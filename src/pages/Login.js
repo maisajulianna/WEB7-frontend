@@ -38,10 +38,10 @@ const Login = () => {
       <br />
       
       <div className="buttons">
-        <button type="submit" className="turq-btn">Log in</button>
+        <button type="submit">Log in</button>
       </div>
       
-      <p>Don't have an account?<br />
+      <p className='login-footer'>Don't have an account?<br />
         <Link className="link-btn" to="/signup">Sign up here!</Link>
       </p>
 

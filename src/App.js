@@ -11,11 +11,11 @@ import NotFound from './pages/NotFound';
 import Navbar from './components/Navbar';
 import './App.css';
 
+
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <Navbar />
         <div className="pages">
           <Routes>
             <Route path="/" element={<Navbar />}>

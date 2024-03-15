@@ -1,0 +1,253 @@
+/* google font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=VT323&display=swap');
+
+/* layout */
+:root {
+  --primary: #1aac83;
+  --error: #e7195a;
+
+  --green: #b2c9ab;
+  --dark-green: #92b2b1;
+  --gray: #3b3c4b;
+  --violet: #666a86;
+
+  --light-violet: #788aa3;
+  --light-bg: #afc4e0;
+  --dark-bg: #3b3c4b;
+  --baby-blue: #dae9fb;
+}
+body {
+  background-color: var(--light-bg); /* Default background color */
+  color: var(--gray);
+  margin: 0;
+  font-family: "Poppins";
+}
+
+/* navigation */
+.dark {
+  background-color: var(--dark-bg); /* Background color for dark mode */
+  color: var(--light-bg); /* Text color for dark mode */
+}
+nav {
+  background: var(--violet);
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  width: 100%;
+
+  margin: 0;
+}
+nav a {
+  text-decoration: none;
+}
+nav li {
+  color: var(--gray);
+  list-style: none;
+  margin-left: 10px;
+  display: inline-block;
+}
+nav button, nav a {
+  color: var(--gray);
+  background: var(--green);
+  border: 2px solid var(--gray);
+  font-family: "Poppins";
+  font-size: 1em;
+  text-align: center;
+
+  padding: 6px 10px;
+  border-radius: 4px;
+
+  cursor: pointer;
+  display: block;
+}
+nav a:hover, nav button:hover {
+  background-color: var(--dark-green);
+}
+
+
+/* login */
+.login-box {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 4px;
+}
+.dark .login-box {
+  background-color: #788aa3;
+  color: var(--gray);
+}
+.login-box:not(h2, p) {
+  position: relative;
+  justify-content: center;
+}
+.login-box button {
+  background-color: var(--green);
+  color:var(--gray);
+  border: 1px solid var(--gray);
+  font-family: "Poppins";
+
+  padding: 6px 10px 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  
+  width: 80%;
+  bottom: 5rem;
+  left: 10%;
+}
+.login-box button:hover {
+  background-color: var(--dark-green);
+}
+.link-btn {
+  color: var(--gray);
+}
+.link-btn:hover {
+  color: var(--green);
+}
+.login-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+}
+.login-box input {
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.login-box label, input {
+  display: block;
+}
+
+/* homepage */
+.home {
+  display: flex;
+  justify-content: center;
+}
+/* feedbacks from db */
+.feedback, .feedback-container {
+  display: inline-block;
+  position: relative;
+  width: 40%;
+  margin: 3rem;
+  padding: 1.5rem;
+
+  border: 2px solid var(--gray);
+  background-color: var(--baby-blue);
+}
+/* form to upload feedback */
+.feedback-container {
+  height: 30rem;
+  text-align: center;
+}
+.feedback button {
+color: var(--gray);
+background: var(--green);
+border: 2px solid var(--gray);
+font-family: "Poppins";
+text-align: center;
+
+padding: 4px 10px;
+margin-bottom: 10px;
+border-radius: 4px;
+
+cursor: pointer;
+display: block;
+}
+.feedback button:hover {
+background-color: var(--dark-green);
+}
+.single-feedback {
+  border-bottom: 2px solid var(--gray);
+}
+.feedback-container input, .feedback-container textarea {
+  margin: 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10%;
+  padding: 10px;
+  display: block;
+  width: 80%;
+
+  border: 2px solid var(--gray);
+  border-radius: 4px;
+}
+.feedback-container button {
+  background-color: var(--green);
+  color:var(--gray);
+  border: 1px solid var(--gray);
+  font-family: "Poppins";
+  padding: 6px 10px 6px 10px;
+  margin-top: 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.feedback-container button:hover {
+  border: 2px solid var(--gray);
+  background-color: var(--dark-green);
+}
+/* dark mode */
+.dark .feedback-container, .dark .feedback {
+  background-color: var(--violet);
+  border: 2px solid #232323;
+
+}
+
+/* error */
+div.error {
+  padding: 10px;
+  background: #ffefef;
+  border: 1px solid var(--error);
+  color: var(--error);
+  border-radius: 4px;
+  margin: 20px 0;
+}
+input.error {
+  border: 1px solid var(--error);
+}
+
+/* auth forms */
+form.signup, form.login {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 4px;
+}
+
+.not-found {
+  margin: 2rem;
+}
+.start {
+  margin: 2rem;
+  margin-top: 8rem;
+  text-align: center;
+}
+.start a {
+  color: var(--gray);
+  background: var(--green);
+  border: 1px solid var(--gray);
+  font-family: "Poppins";
+  font-size: 1em;
+  text-align: center;
+
+  padding: 6px 10px;
+  margin: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.start a:hover {
+  background-color: var(--dark-green);
+  border: 2px solid var(--gray);
+}
+.start img {
+  margin-top: 20px;
+}
